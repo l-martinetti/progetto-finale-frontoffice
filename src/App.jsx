@@ -6,15 +6,13 @@ import HomePage from "./pages/HomePage"
 function App() {
 
   return (
-    <>
     <GlobalProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" Component={HomePage}/>
+          <Route path="/" element={<HomePage />}/>
         </Routes>
       </BrowserRouter>
     </GlobalProvider>
-    </>
   )
 }
 

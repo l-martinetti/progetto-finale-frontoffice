@@ -4,7 +4,25 @@ import axios from "axios";
 const GlobalContext = createContext();
 
 const GlobalProvider = ({children}) => {
-    const value = {};
+
+    const API_videogames_endpoint = import.meta.env.VITE_ENDPOINT_API_VIDEOGAMES;
+
+    const [videogames, setVideogames] = useState([]);
+
+    const fetchVideogames = () => {
+        axios.get(API_videogames_endpoint)
+         .then(res => {
+            setVideogames(res.data.data)
+         })
+         .catch(error => {
+                console.error('Error: ', error);
+            })        
+    }
+
+    const value = {
+        videogames,
+        fetchVideogames
+    };
 
     return(
         <GlobalContext.Provider value= {value}>
