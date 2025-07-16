@@ -21,7 +21,8 @@ const GlobalProvider = ({children}) => {
 
     const value = {
         videogames,
-        fetchVideogames
+        fetchVideogames,
+        API_videogames_endpoint
     };
 
     return(
