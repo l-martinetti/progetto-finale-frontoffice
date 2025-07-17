@@ -1,31 +1,29 @@
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useGlobalContext } from "../contexts/GlobalContext";
-
-import axios  from "axios";
 
 function VideogameDetails() {
 
     const {id} = useParams();
-    const [videogame, setVideogame] = useState(null);
-    const {API_videogames_endpoint} = useGlobalContext();
-
-    const fetchVideogame = () => {
-        axios.get(`${API_videogames_endpoint}/${id}`)
-            .then(res => {
-                setVideogame(res.data)
-            })
-    }
+    
+    const {fetchVideogameDetails, videogame} = useGlobalContext();
 
     useEffect(()=>{
-        fetchVideogame()
+        fetchVideogameDetails(id)
     }, [id]);
 
   return (
     <div className="container">
         <div>VideogameDetails</div>
         <p>Titolo: {videogame?.data?.title}</p>
+        <img src={videogame?.data?.cover_image} alt="" />
+        {console.log(videogame)}
         <p>{videogame?.data?.description}</p>
+        <p>
+        {videogame?.data?.consoles?.map(console=>(
+            <span key={console.id}>{console.name}</span>
+        ))}
+        </p>
     </div>
   )
 }
