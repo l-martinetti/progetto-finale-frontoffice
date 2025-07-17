@@ -3,20 +3,18 @@ import { Link } from "react-router-dom"
 function Card({videogame}) {
 
   return (
-    
-        <div className="card h-100">
-            <div className="card-body">
-              <img src={videogame.cover_image} className="card-img-top" alt={videogame.title} />
-              {console.log(videogame)}
-                <h5 className="card-title">{videogame.title}</h5>
-                <p className="card-text">{videogame.description}</p>
-                <p className="text">{videogame.release_date}</p>
-                <Link to={`/videogame/${videogame.id}`}>
-                <button className="btn btn-primary">Dettagli</button>
-                </Link>
-            </div>
-        </div>
-    
+
+    <div className="d-flex h-100">
+      <img src={videogame.cover_image} className="img-fluid rounded" alt={videogame.title} style={{ height: "auto", width: "270px" }}/>
+      <div className="d-flex flex-column ms-5">
+        <h5 className="text-white">{videogame.title}</h5>
+        <p className="text-secondary">{videogame.release_date}</p>
+        <p className="text-secondary">{videogame.description}</p>
+        <Link to={`/videogame/${videogame.id}`}>
+        <button className="btn text-white pb-3">Dettagli</button>
+        </Link>
+      </div>
+    </div>      
   )
 }
 

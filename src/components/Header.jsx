@@ -1,6 +1,10 @@
+import NavBar from "./NavBar"
+
 function Header() {
   return (
-    <div>Header</div>
+    <header className="px-5 py-2">
+        <NavBar />
+    </header>
   )
 }
 

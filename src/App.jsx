@@ -4,6 +4,7 @@ import { GlobalProvider } from "./contexts/GlobalContext";
 import HomePage from "./pages/HomePage"
 import VideogameDetails from "./pages/VideogameDetails";
 import DefaultLayout from "./layouts/DefaultLayout";
+import Consoles from "./pages/Consoles";
 
 function App() {
 
@@ -13,8 +14,9 @@ function App() {
         <Routes >
           <Route element={<DefaultLayout />}>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/videogame/:id" element={<VideogameDetails />}/>
+          <Route path="/consoles" element={<Consoles />}/>
           </Route>
+          <Route path="/videogame/:id" element={<VideogameDetails />}/>
         </Routes>
       </BrowserRouter>
     </GlobalProvider>

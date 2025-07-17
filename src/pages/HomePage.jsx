@@ -8,13 +8,13 @@ const HomePage = () => {
     useEffect(() => fetchVideogames(), []);
 
     return (
-        <div>
-            <h1 className="p-2 text-center">Lista Videogames</h1>
+        <div className="container">
+            <h1 className="p-2 text-white fs-3">Latest News</h1>
             <div className="container">
-                <div className="row row-cols-4">
+                <div className="row row-cols-1">
                 {
                     videogames?.map(videogame => (
-                        <div key={videogame.id} className="col mb-3">
+                        <div key={videogame.id} className="col mb-5">
                             <Card videogame={videogame}/> 
                         </div>
                         

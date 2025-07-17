@@ -1,0 +1,53 @@
+:root {
+  --colore-principale: #302636;
+  --colore-secondario: #1F1D29;
+}
+
+header{
+background-color: var(--colore-principale); 
+}
+
+body{
+  background-color: var(--colore-secondario) !important; 
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1); 
+}
+
+.nav-link.active-tab::before {
+  transform: scaleX(1);
+  background-color: rgba(255, 0, 0, 0.4); 
+}
+
+.btn.text-white:hover {
+  color: rgb(200, 0, 0) !important;
+}
+
+.cart-icon {
+  color: white;
+  transition: color 0.3s ease;
+
+  font-size: larger;
+}
+.cart-icon:hover {
+  color:red !important;
+}
