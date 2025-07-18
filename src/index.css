@@ -19,11 +19,13 @@ body{
 .nav-link::before {
   content: "";
   position: absolute;
+  z-index: 0;
   top: 60%;
   left: 0;
-  height: 4px;
+  height: 5px;
   width: 100%;
-  background-color: rgba(255, 0, 0, 0.4);
+  border-radius: 10%;
+  background-color: rgba(255, 0, 0, 0.8);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -35,7 +37,12 @@ body{
 
 .nav-link.active-tab::before {
   transform: scaleX(1);
-  background-color: rgba(255, 0, 0, 0.4); 
+  background-color: rgba(255, 0, 0, 0.8); 
+}
+
+.nav-link span {
+  position: relative;
+  z-index: 1; 
 }
 
 .btn.text-white:hover {

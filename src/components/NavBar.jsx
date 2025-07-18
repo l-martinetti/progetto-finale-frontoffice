@@ -14,11 +14,11 @@ function NavBar() {
 
           <ul className="navbar-nav flex-row gap-4 fw-bold">
             <li className="nav-item">
-              <Link to="/" className={`nav-link text-white ${location.pathname === "/" ? "active-tab" : ""}`}>Lista</Link>
+              <Link to="/" className={`nav-link text-white ${location.pathname === "/" ? "active-tab" : ""}`}><span>Lista</span></Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/consoles" className={`nav-link text-white ${location.pathname === "/consoles" ? "active-tab" : ""}`}>Consoles</Link>
+              <Link to="/consoles" className={`nav-link text-white ${location.pathname === "/consoles" ? "active-tab" : ""}`}><span>Consoles</span></Link>
             </li>
           </ul>
         </div>
