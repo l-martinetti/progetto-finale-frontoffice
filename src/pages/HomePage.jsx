@@ -3,7 +3,7 @@ import { useGlobalContext } from "../contexts/GlobalContext";
 import Card from "../components/card";
 
 const HomePage = () => {
-    const {videogames, fetchVideogames} = useGlobalContext();
+    const {videogames, fetchVideogames, isLoading} = useGlobalContext();
     const [search, setSearch] = useState("");
 
     useEffect(() => fetchVideogames(), []);
@@ -12,6 +12,18 @@ const HomePage = () => {
         videogame.title.toLowerCase().includes(search.toLowerCase())
     );
 
+    if (isLoading) {
+    return (
+      <div className="container mt-4 d-flex justify-content-center align-items-center" style={{minHeight: '400px'}}>
+        <div className="text-center">
+          <div className="spinner-border text-secondary" role="status">
+            <span className="visually-hidden">Caricamento...</span>
+          </div>
+          <p className="text-white mt-3">Caricamento dettagli...</p>
+        </div>
+      </div>
+    );
+  }
      return (
         <div className="container">
             <input
@@ -21,7 +33,7 @@ const HomePage = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <h1 className="p-2 text-white fs-3">Latest Games</h1>
+            <h1 className="p-2 mb-sm-4 text-white fs-3">Latest Games</h1>
 
             <div className="row row-cols-1">
                 {filteredVideogames?.length > 0 ? (

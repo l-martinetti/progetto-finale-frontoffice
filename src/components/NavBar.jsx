@@ -10,7 +10,9 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid d-flex justify-content-between align-items-center w-100">
         <div className="d-flex align-items-center">
-          <img src={logo} alt="Logo" className="img-fluid me-5" style={{ height: "50px" }} />
+          <Link to="/">
+          <img src={logo} alt="Logo" className="img-fluid me-5" style={{ width: "3rem" }} />
+          </Link>
 
           <ul className="navbar-nav flex-row gap-4 fw-bold">
             <li className="nav-item">

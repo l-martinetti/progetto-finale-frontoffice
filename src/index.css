@@ -3,12 +3,38 @@
   --colore-secondario: #1F1D29;
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 header{
-background-color: var(--colore-principale); 
+  background-color: var(--colore-principale); 
+}
+
+main {
+  padding-top: 80px;
 }
 
 body{
   background-color: var(--colore-secondario) !important; 
+}
+
+.fs-sm {
+  font-size: 0.875rem; /* es. 14px */
+}
+@media (min-width: 768px) {
+  .fs-sm {
+    font-size: 1rem; /* es. 16px su md+ */
+  }
+}
+/* NavBar */
+.navbar {
+  transition: all 0.3s ease;
+
+  .navbar img,
+  .navbar .nav-item {
+    transition: all 0.3s ease;
+  }
 }
 
 .nav-link {
