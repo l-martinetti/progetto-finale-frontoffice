@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "../contexts/GlobalContext";
 import Card from "../components/card";
+import Hero from "../components/Hero";
 
 const HomePage = () => {
     const {videogames, fetchVideogames, isLoading} = useGlobalContext();
@@ -25,7 +26,9 @@ const HomePage = () => {
     );
   }
      return (
-        <div className="container">
+            <>
+            <Hero />
+         <div className="container homePage">
             <input
                 type="text"
                 className="form-control my-4 w-50"
@@ -47,6 +50,7 @@ const HomePage = () => {
                 )}
             </div>
         </div>
+            </>
     );
 }
 

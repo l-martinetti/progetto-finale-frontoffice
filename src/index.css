@@ -3,8 +3,28 @@
   --colore-secondario: #1F1D29;
 }
 
+
+/* Utils */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.opacity-97{
+  opacity: 97%;
+}
+
+.w-90{
+  width: 95%;
+}
+
+/* /Utils */
+
 html, body {
   overscroll-behavior-y: none;
+}
+
+body {
+  font-family: "Orbitron", sans-serif !important;
 }
 
 header{
@@ -83,4 +103,24 @@ body{
 }
 .cart-icon:hover {
   color:red !important;
+}
+
+.shrink-logo {
+  width: 2.2rem !important;
+}
+
+.expand-logo {
+  width: 3rem !important;
+}
+
+.shrink-text {
+  font-size: 0.85rem !important;
+}
+
+.shrink-icon {
+  font-size: 1rem !important;
+}
+
+.homePage {
+  margin-top: 65rem;
 }
