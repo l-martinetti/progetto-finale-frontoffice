@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 function Header() {
 
   const headerRef = useRef(null);
-  const scrolled = useScrollShrinkHeader(700);
+  const scrolled = useScrollShrinkHeader(600);
     
   return (
     <header 

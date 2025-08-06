@@ -27,7 +27,7 @@ const HomePage = () => {
   }
      return (
             <>
-            <Hero />
+            <Hero videogames={videogames}/>
          <div className="container homePage">
             <input
                 type="text"
