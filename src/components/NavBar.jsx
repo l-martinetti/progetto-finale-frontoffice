@@ -17,6 +17,9 @@ function NavBar({scrolled}) {
                 scrolled ? "shrink-logo" : "expand-logo"
               }`} />
           </Link>
+              </div>
+
+          <div>
 
           <ul className="navbar-nav flex-row gap-4 fw-bold">
             <li className="nav-item">
@@ -25,24 +28,23 @@ function NavBar({scrolled}) {
                 className={`nav-link text-white transition-all ${
                   scrolled ? "shrink-text" : ""
                 } ${location.pathname === "/" ? "active-tab" : ""}`}
-              >
-                <span>Lista</span>
+                >
+                <span>Catalogo</span>
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
-                to="/consoles"
-                className={`nav-link text-white transition-all ${
-                  scrolled ? "shrink-text" : ""
+              to="/consoles"
+              className={`nav-link text-white transition-all ${
+                scrolled ? "shrink-text" : ""
                 } ${location.pathname === "/consoles" ? "active-tab" : ""}`}
-              >
-              <span>Consoles</span>
-              </Link>
-            </li>
+                >
+                <span>Consoles</span>
+                </Link>
+                </li> */}
           </ul>
-        </div>
-
+          </div>
         <div>
             <ul className="navbar-nav flex-row gap-3">
       <li className="nav-item text-white">

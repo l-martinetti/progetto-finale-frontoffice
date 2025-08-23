@@ -1,6 +1,7 @@
 :root {
   --colore-principale: #302636;
   --colore-secondario: #1F1D29;
+  --main-background: #101319;
 }
 
 
@@ -9,13 +10,11 @@
   transition: all 0.3s ease;
 }
 
-.opacity-97{
-  opacity: 97%;
+.opacity-95{
+  opacity: 95%;
 }
 
-.w-90{
-  width: 95%;
-}
+
 
 /* /Utils */
 
@@ -27,10 +26,6 @@ body {
   font-family: "Orbitron", sans-serif !important;
 }
 
-header{
-  background-color: var(--colore-principale); 
-  z-index: 10;
-}
 
 body{
   background-color: var(--colore-secondario) !important; 
@@ -43,6 +38,28 @@ body{
   .fs-sm {
     font-size: 1rem; /* es. 16px su md+ */
   }
+}
+
+/* Header */
+
+header{
+  background-color: var(--main-background); 
+  z-index: 10;
+}
+
+.header-transition {
+  transition: all 10s ease;
+  padding-left: var(--header-px, 1.25rem); /* 20px default */
+  padding-right: var(--header-px, 1.25rem);
+  padding-top: var(--header-py, 0.5rem);    /* 8px default */
+  padding-bottom: var(--header-py, 0.5rem);
+  opacity: var(--header-opacity, 1);
+}
+
+.header-scrolled {
+  --header-px: 0.75rem;    /* 12px */
+  --header-py: 0.25rem;    /* 4px */
+  --header-opacity: 0.97;
 }
 
 /* Hero */

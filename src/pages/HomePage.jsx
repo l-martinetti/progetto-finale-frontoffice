@@ -27,8 +27,8 @@ const HomePage = () => {
   }
      return (
             <>
-            <Hero videogames={videogames}/>
-         <div className="container homePage">
+            <Hero />
+         <div className="container">
             <input
                 type="text"
                 className="form-control my-4 w-50"
